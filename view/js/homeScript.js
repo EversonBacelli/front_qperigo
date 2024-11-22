@@ -175,7 +175,7 @@ function setupCardClickHandlers() {
 
   cardColumnTotality.forEach((card) => {
     card.addEventListener("click", () => {
-      window.location.href = `./conteudo.html?id=${card.id}`;
+      window.location.href = `https://front-qperigo.vercel.app/view/conteudo.html?id=${card.id}`;
     });
   });
 }
