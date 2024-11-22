@@ -18,7 +18,7 @@ function searchInteration() {
   const handleSearch = () => {
     const query = searchInput.value.trim();
     if (query) {
-      const searchURL = `./pesquisa.html?query=${encodeURIComponent(query)}`;
+      const searchURL = `https://front-qperigo.vercel.app/view/pesquisa.html?query=${encodeURIComponent(query)}`;
       window.location.href = searchURL;
     }
   };
