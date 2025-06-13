@@ -1,0 +1,181 @@
+:root {
+  /* Cores atualizadas com melhor contraste */
+  --primary-color: #008a1e;
+  --primary-light: #00c735;
+  --secondary-color: #005614;
+  --text-color: #2d3748;
+  --text-light: #4a5568;
+  --light-gray: #f8fafc;
+  --medium-gray: #e2e8f0;
+  --dark-gray: #64748b;
+  --white: #ffffff;
+  --black: #1a202c;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Bordas */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Transições */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+
+/* Banner Principal */
+.container-imagem-produto {
+  max-width: min(1000px, 90vw);
+  height: min(500px, 50vh);
+  margin: 2rem auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  isolation: isolate;
+}
+
+.container-imagem-produto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.img-produto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.container-imagem-produto:hover .img-produto {
+  transform: scale(1.05);
+}
+
+
+.return-page {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.return-page i {
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+
+    .return-page i {
+    font-size: 20px;
+    margin: 18px 0;
+  }
+  
+}
+
+.return-page {
+  position: fixed;
+  top: 6rem;
+  left: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  z-index: 99;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: translateY(-3px) scale(1); }
+  50% { transform: translateY(-3px) scale(1.05); }
+  100% { transform: translateY(-3px) scale(1); }
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .container-imagem-produto {
+    height: min(400px, 60vh);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+
+
+  
+  .return-page {
+    top: 5rem;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-imagem-produto {
+    height: min(250px, 40vh);
+    margin: 1rem auto;
+  }
+  
+}
+
+/* Efeito hover para o botão de retornar à página */
+.return-page {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.return-page:hover {
+  transform: translateX(-3px);
+  box-shadow: 0 4px 8px rgba(0, 138, 30, 0.2);
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.return-page:hover i {
+  color: white;
+}
+
+/* Animação de pulse para elementos interativos */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 200, 53, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 200, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 200, 53, 0); }
+}
+
+/* Efeito hover para o banner */
+.container-imagem-produto:hover::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+/* Melhorias na responsividade dos hovers */
+@media screen and (max-width: 768px) {
+  .swiper-slide:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .return-page:hover {
+    transform: none;
+  }
+}

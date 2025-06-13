@@ -1,4 +1,3 @@
-@import url(./components/filter_rooms.css);
 
 /* Container geral do About Us */
 .container-about-us {
@@ -280,7 +279,5 @@
     font-size: 14px;
   }
 
-  .search-input {
-    width: 160px;
-  }
+
 }
