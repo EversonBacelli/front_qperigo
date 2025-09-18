@@ -1,0 +1,101 @@
+        .contain-news {
+            margin: 10px;
+        }
+
+        .contain-news h1 {
+            font-family: 'Sniglet', cursive;
+            font-size: 35px;
+            font-weight: 400;
+            color: #301937;
+            padding: 5px;
+
+        }
+
+        .news1, .news2{
+            display: flex;
+            justify-content: center;
+        }
+
+        .news2 {
+            flex-direction: row-reverse;
+        }
+
+        .info {
+            background-color: #EDE8F8;
+            width: 100vh;
+            max-height: max-content;
+        }
+        .info h3 {
+
+            color: #000000;
+            font-family: 'Shanti', cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            line-height: 72px;
+            letter-spacing: 1.5px;
+            vertical-align: middle;
+            text-align: left;
+            padding: 30px 90px;
+
+        }
+        .info p {
+
+            color: #000000;
+            font-family: 'Sansantion', cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 72px;
+            letter-spacing: 1.5px;
+            vertical-align: middle;
+            text-align: left;
+            padding: 30px 95px;
+
+
+        }
+
+        .inferior-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 95px;
+
+        }
+
+        .inferior-info a {
+            color: #480F33;
+            font-family: 'Sniglet', cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            line-height: 48px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+
+        }
+
+        .inferior-info h4 {
+            color: #0C0C0C;
+            font-family: 'Shanti', cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            line-height: 48px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+
+        }
+
+
+        .cover {
+            width: 100vh;
+            background-repeat: no-repeat;
+        }
+        .cover1 {
+            background-image: url('../../..//assets/images/news/noticia-1.jpg');
+        }
+        .cover2 {
+            background-image: url('../../../assets/images/news/noticia-2.jpg');
+        }
+

@@ -1,0 +1,71 @@
+/* Objetivos */
+.base-objectives {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.objective {
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  flex: 1;
+  max-width: 30%;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.objective:hover {
+  transform: translateY(-10px);
+}
+
+.objective:hover::before {
+  transform: scaleX(1);
+}
+
+.title-objetive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.title-objetive h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-right: 15px;
+}
+
+.title-objetive h2 {
+  font-family: 'Sniglet', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.objective p {
+  font-family: 'Sansation', sans-serif;
+  text-align: justify;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}

@@ -1,0 +1,150 @@
+/* ESTILOS GERAIS (todas as telas) */
+.cards-home-geral, .cards-home-destaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.card {
+  width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(106, 90, 205, 0.2);
+  background: white;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  margin: 20px;
+  position: relative;
+  transition: ease 0.3s;
+  flex-shrink: 0; /* Impede que o card encolha */
+}
+
+.card:hover {
+  opacity: 0.7;
+  transform: scale(0.97);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.box-badge {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(138, 43, 226, 0.9);
+  border-radius: 20px;
+}
+
+.icon-badge {
+  padding-left: 5px;
+  height: 20px;
+}
+
+.card-badge {
+  color: white;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #4B0082;
+}
+
+.card-intro {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #9370DB, #8A2BE2);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-link:hover {
+  background: linear-gradient(135deg, #8A2BE2, #4B0082);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(138, 43, 226, 0.3);
+}
+
+/* VERSÃO MOBILE (max-width: 700px) */
+@media (max-width: 700px) {
+  .cards-home-geral {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px 10px;
+    margin: 0 -10px;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .card {
+    width: calc(100vw - 40px); /* Largura adaptável */
+    min-width: calc(100vw - 40px); /* Garante largura mínima */
+    margin: 0 10px 0 0;
+    scroll-snap-align: start;
+  }
+  
+  /* Correção para o primeiro card */
+  .card:first-child {
+    margin-left: 20px;
+  }
+  
+  /* Correção para o último card */
+  .card:last-child {
+    margin-right: 20px;
+  }
+  
+  /* Estilização da scrollbar */
+  .cards-home-geral::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .cards-home-geral::-webkit-scrollbar-track {
+    background: #f0ebff;
+    border-radius: 3px;
+  }
+  
+  .cards-home-geral::-webkit-scrollbar-thumb {
+    background-color: #8A2BE2;
+    border-radius: 3px;
+  }
+  
+  /* Espaço final para melhor visualização */
+  .cards-home-geral::after {
+    content: '';
+    min-width: 10px;
+    height: 1px;
+  }
+}

@@ -1,0 +1,15 @@
+/* Variáveis CSS */
+:root {
+  --primary-color: #423A47;
+  --secondary-color: #928B9D;
+  --accent-color: #6D5D7A;
+  --light-color: #F4EFFA;
+  --dark-color: #282828;
+  --gradient-start: #CEC6DA;
+  --gradient-end: #928B9D;
+  --text-color: #282828;
+  --background-color: #F4EFFA;
+  --card-background: rgba(255, 255, 255, 0.95);
+  --border-color: #CEC6DA;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}

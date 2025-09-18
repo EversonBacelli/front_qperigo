@@ -1,0 +1,10 @@
+/* Estilos globais */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--text-color);
+}

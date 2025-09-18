@@ -1,0 +1,222 @@
+.filtro-container {
+    max-width: 1400px;  /* Largura máxima do container */
+    margin: 0 auto;     /* Centraliza horizontalmente */
+    padding: 0 20px;    /* Padding lateral de 20px */
+}
+
+.container-filtro{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.titulo-gerais {
+    display: flex;          /* Layout flexbox */
+    align-items: center;    /* Alinha itens verticalmente */
+    justify-content: space-between;
+    font-family: 'Segoe UI', sans-serif;
+    gap: 10px;             /* Espaço entre elementos filhos */
+    color: #4B0082;        /* Cor roxa escura */
+    font-size: 28px;       /* Tamanho da fonte */
+    margin-bottom: 15px;   /* Margem inferior */
+    font-weight: 700;      /* Negrito */
+}
+
+.titulo-filtro {
+    display: flex;          /* Layout flexbox */
+    align-items: center;    /* Alinha itens verticalmente */
+    font-family: 'Segoe UI', sans-serif;
+    gap: 10px;             /* Espaço entre elementos filhos */
+    color: #453861ad;
+    font-size: 18px;       /* Tamanho da fonte */
+    margin-bottom: 15px;   /* Margem inferior */
+    font-weight: 700;      /* Negrito */
+
+}
+
+.icons {
+    width: 28px;          /* Largura do ícone */
+    height: 28px;         /* Altura do ícone */
+    filter: invert(25%) sepia(90%) saturate(2596%) hue-rotate(260deg) brightness(90%) contrast(90%); /* Filtro para cor roxa */
+    transition: transform 0.3s ease; /* Animação suave de rotação */
+}
+
+.icons:hover {
+    transform: rotate(90deg); /* Rotaciona ícone 90° no hover */
+}
+
+/* Container de filtro */
+.opcoes-filtro {
+    display: none;          /* Inicialmente oculto */
+    flex-direction: column; /* Disposição em coluna */
+    gap: 20px;             /* Espaço entre elementos */
+    padding: 25px;         /* Espaçamento interno */
+    margin: 20px 0;        /* Margem vertical */
+    border-radius: 16px;   /* Bordas arredondadas */
+    background: #fff;      /* Fundo branco */
+    box-shadow: 0 8px 32px rgba(106, 90, 205, 0.1); /* Sombra roxa suave */
+    border: 1px solid #e8e3ff; /* Borda roxa clara */
+}
+
+.opcoes-filtro.show {
+    display: flex; /* Mostra o filtro quando tem classe 'show' */
+}
+
+/* Header do filtro */
+.filtro-header {
+    display: flex;          /* Layout flexbox */
+    flex-direction: column; /* Disposição em coluna */
+    gap: 8px;              /* Espaço entre elementos */
+}
+
+.filtro-label {
+    font-size: 18px;       /* Tamanho da fonte */
+    font-weight: 600;      /* Semi-negrito */
+    color: #6A5ACD;       /* Cor roxa */
+    padding-left: 8px;     /* Recuo esquerdo */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.filtro-underline {
+    height: 2px;           /* Altura da linha */
+    width: 60px;           /* Largura da linha */
+    background: linear-gradient(90deg, #8A2BE2, #9370DB); /* Gradiente roxo */
+    border-radius: 2px;    /* Bordas levemente arredondadas */
+}
+
+
+/* Botões de cômodos */
+.filtro-buttons {
+    display: flex;       /* Layout flexbox */
+    flex-wrap: wrap;    /* Quebra de linha quando necessário */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;          /* Espaço entre botões */
+}
+
+.opcoes-filtro .room {
+    background: white;  /* Fundo branco */
+    position: relative; /* Posicionamento relativo */
+    min-width: 160px;   /* Largura mínima */
+    padding: 12px 20px; /* Espaçamento interno */
+    display: flex;      /* Layout flexbox */
+    align-items: center; /* Alinha itens verticalmente */
+    gap: 10px;          /* Espaço entre elementos */
+    font-size: 14px;    /* Tamanho da fonte */
+    border-radius: 12px; /* Bordas arredondadas */
+    border: 1px solid #e8e3ff; /* Borda roxa clara */
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.08); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição suave para hover */
+    cursor: pointer;    /* Cursor de pointer */
+}
+
+/* Estilos para ícones dentro dos botões */
+.opcoes-filtro .room img {
+    width: 20px;        /* Largura do ícone */
+    height: 20px;       /* Altura do ícone */
+    filter: invert(25%) sepia(90%) saturate(2596%) hue-rotate(260deg) brightness(90%) contrast(90%); /* Filtro roxo */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Estilos para texto dentro dos botões */
+.opcoes-filtro .room h3 {
+    margin: 0;          /* Remove margens */
+    color: #4B0082;     /* Cor roxa escura */
+    font-weight: 500;   /* Peso da fonte */
+    font-size: 14px;    /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeitos hover */
+.opcoes-filtro .room:hover {
+    background: #f9f7ff;       /* Fundo roxo claro */
+    border-color: #d0c4ff;     /* Borda roxa */
+    transform: translateY(-2px); /* Levanta o botão */
+    box-shadow: 0 6px 16px rgba(138, 43, 226, 0.15); /* Sombra mais intensa */
+}
+
+.opcoes-filtro .room:hover img {
+    filter: invert(15%) sepia(90%) saturate(3596%) hue-rotate(260deg) brightness(80%) contrast(90%); /* Ícone mais escuro */
+}
+
+/* Estado ativo */
+.opcoes-filtro .room.active {
+    background: linear-gradient(135deg, #8A2BE2, #6A5ACD); /* Gradiente roxo */
+    border-color: #8A2BE2; /* Borda roxa */
+}
+
+.opcoes-filtro .room.active h3,
+.opcoes-filtro .room.active img {
+    color: white;       /* Texto branco */
+    filter: brightness(0) invert(1); /* Ícone branco */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .opcoes-filtro {
+        padding: 20px;  /* Reduz padding em telas menores */
+    }
+}
+
+@media (max-width: 1000px) {
+    .filtro-buttons {
+        overflow-x: auto;       /* Scroll horizontal */
+        padding-bottom: 10px;   /* Espaço para scroll */
+        flex-wrap: nowrap;      /* Não quebra linha */
+        scrollbar-width: thin;  /* Scrollbar fina (Firefox) */
+        scrollbar-color: #8A2BE2 #f0ebff; /* Cores da scrollbar */
+    }
+    
+    /* Personaliza scrollbar no Chrome */
+    .filtro-buttons::-webkit-scrollbar {
+        height: 6px;           /* Altura da scrollbar */
+    }
+    
+    .filtro-buttons::-webkit-scrollbar-track {
+        background: #f0ebff;    /* Cor do track */
+        border-radius: 10px;    /* Bordas arredondadas */
+    }
+    
+    .filtro-buttons::-webkit-scrollbar-thumb {
+        background-color: #8A2BE2; /* Cor do thumb */
+        border-radius: 10px;     /* Bordas arredondadas */
+    }
+    
+    .opcoes-filtro .room {
+        min-width: 140px;       /* Largura menor */
+        flex-shrink: 0;         /* Não reduz tamanho */
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-gerais {
+        font-size: 24px;       /* Fonte menor */
+    }
+    
+    .opcoes-filtro {
+        padding: 16px;         /* Padding menor */
+    }
+    
+    .filtro-label {
+        font-size: 16px;       /* Fonte menor */
+    }
+    
+    .opcoes-filtro .room {
+        min-width: 120px;      /* Largura menor */
+        padding: 10px 16px;    /* Padding menor */
+    }
+}

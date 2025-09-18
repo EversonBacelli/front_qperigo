@@ -1,0 +1,10 @@
+/* Variáveis de cores */
+:root {
+  --primary-color: #423A47;
+  --secondary-color: #928B9D;
+  --accent-color: #6D5D7A;
+  --light-color: #F4EFFA;
+  --dark-color: #282828;
+  --gradient-start: #CEC6DA;
+  --gradient-end: #928B9D;
+}

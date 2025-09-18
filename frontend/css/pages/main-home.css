@@ -1,0 +1,8 @@
+/* main-home.css - Arquivo principal que importa todos os módulos CSS da pagina de conteudo */
+@import url('home/banner-home.css');
+@import url('home/barra\ de\ busca.css');
+@import url('home/card-gerais.css');
+@import url('home/destaques.css');
+@import url('home/filtro.css');
+@import url('home/news.css');
+@import url('home/numberpages.css');

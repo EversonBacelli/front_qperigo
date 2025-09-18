@@ -1,0 +1,201 @@
+/* Layout principal e responsivo combinados */
+main {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+/* Layout responsivo */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    gap: 20px;
+  }   
+
+  .indice {
+    background-color: rgba(206, 198, 218, 0.15);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    position: relative;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .artigo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .card-badge {
+    font-size: 12px;
+  }
+
+  .icon-badge {
+    height: 20px;
+  }
+  
+  .indice nav ul li {
+    list-style-type: none;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .indice nav ul li::marker {
+    color: var(--accent-color);
+  }
+
+  .art p {
+    letter-spacing: 0.5px;
+    font-size: 1.05em;
+  }
+  
+  h1 {
+    font-size: 2em;
+    padding-right: 15px;
+    font-weight: 400;
+  }
+  
+  .titule_indice {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+  
+  .titule_indice::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Melhorias para o índice em dispositivos móveis */
+  .indice nav ul {
+    gap: 6px;
+  }
+  
+  .indice nav ul li.permanent-active {
+    transform: translateX(5px) scale(1.01);
+  }
+  
+  /* Melhorias de toque para dispositivos móveis */
+  .indice nav ul li {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main {
+    gap: 25px;
+    padding: 25px;
+  }
+  
+  .indice {
+    width: 30%;
+  }
+  
+  .artigo {
+    width: 70%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .indice {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    padding: 20px;
+    padding-top: 0px;
+    width: 25%;
+    z-index: 10;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    max-height: 80vh;
+    overflow: auto;
+  }
+
+
+.titule_indice {
+  position: sticky;
+  top:  0;
+  background-color: var(--card-background); /* importante para cobrir conteúdo atrás */
+  padding: 10px 0;
+  z-index: 50;
+}
+
+  
+  
+
+  .artigo {
+    width: 75%;
+    padding-right: 0;
+  }
+
+  .indice nav ul li {
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    padding: 0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .indice nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .indice nav ul li:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(109, 93, 122, 0.15);
+  }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .indice nav ul li,
+  .img_produto,
+  .return-page,
+  .voltar-topo {
+    transition: none;
+  }
+  
+  .indice nav ul li:hover,
+  .indice nav ul li.permanent-active {
+    transform: none;
+  }
+}
+
+/* Modificações para a seção autor_data */
+@media screen and (max-width: 768px) {
+  .autor_data {
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .autor_data .autor:nth-child(2) {
+    display: none; /* Remove o separador "|" */
+  }
+}

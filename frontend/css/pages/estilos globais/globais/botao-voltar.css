@@ -1,0 +1,54 @@
+/* Botão de retorno */
+.return-page {
+  position: fixed;
+  top: 9rem;
+  left: 1.5rem;
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  color: #8A2BE2; /* Roxo principal */
+  border: 1px solid #e8e3ff; /* Roxo muito claro */
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(241, 241, 241, 0.1);
+  transition: all 0.2s ease;
+}
+
+.return-page i {
+  font-size: 20px;
+}
+
+.return-page:hover {
+  transform: translateX(-2px);
+  background: #8A2BE2; /* Roxo principal */
+  border-color: #8A2BE2;
+  box-shadow: 0 4px 6px rgba(138, 43, 226, 0.15);
+}
+
+.return-page:hover i { 
+  color: white;
+
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .return-page {
+    top: 5rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .return-page i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .return-page:hover {
+    transform: none; /* Remove animação em mobile */
+  }
+}

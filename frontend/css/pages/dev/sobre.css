@@ -1,0 +1,41 @@
+/* Sobre o Projeto */
+.about-project {
+  padding: 50px 30px;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+  margin: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title-projet {
+  color: var(--primary-color);
+  font-family: 'Sniglet', cursive;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title-projet::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.description-project {
+  font-size: 1.1rem;
+  font-family: 'Sansation', sans-serif;
+  line-height: 1.7;
+  text-align: justify;
+  text-indent: 1em;
+  margin-bottom: 50px;
+  color: var(--dark-color);
+}

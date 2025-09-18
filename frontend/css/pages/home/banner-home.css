@@ -1,0 +1,78 @@
+        /* Estilos do carrossel (simplificados) */
+        .contain-carrossel {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow:5px 5px 10px 18px rgba(0, 0, 0, 0.09);
+        }
+        
+        .contain-banners {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .contain-banners img {
+            width: 100%;
+            flex-shrink: 0;
+            object-fit: cover; /* Mostra imagem inteira sem cortar */
+            height: 550px;
+            display:block;
+        }
+        
+        /* Botões de navegação */
+        .carrossel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 7vh;
+            height: 7vh;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 4vh;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .carrossel-btn {
+                width: 4vh;
+                height: 4vh;
+                font-size: 2vh;
+            }
+        }
+        .carrossel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .carrossel-btn.prev {
+            left: 15px;
+        }
+        
+        .carrossel-btn.next {
+            right: 15px;
+        }
+        
+        /* Indicadores */
+        .carrossel-indicadores {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .indicador {
+            width: 2vh;
+            height: 2vh;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+        
+        .indicador.active {
+            background: white;
+        }

@@ -1,0 +1,121 @@
+/* Responsividade para telas menores */
+@media (max-width: 992px) {
+  .objective {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-about-us {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 20px 15px;
+  }
+
+  .about-img {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .about-data {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .about-data .wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .about-data p {
+    font-size: 1rem;
+  }
+
+  .about-project {
+    padding: 30px 20px;
+    margin: 30px 10px;
+  }
+
+  .title-projet {
+    font-size: 2rem;
+  }
+
+  .description-project {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .base-objectives {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .objective {
+    max-width: 100%;
+  }
+
+  .container-team {
+    padding: 20px 15px;
+    margin: 30px 10px;
+  }
+
+  .container-team h1 {
+    font-size: 1.8rem;
+  }
+
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .titule-equipe {
+    text-align: center;
+  }
+
+  select {
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-data .wrapper h1 {
+    font-size: 1.8rem;
+  }
+  
+  .title-projet {
+    font-size: 1.8rem;
+  }
+  
+  .container-team h1 {
+    font-size: 1.6rem;
+  }
+  
+  .title-objetive {
+    flex-direction: column;
+  }
+  
+  .title-objetive h1 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .img-member {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .project-description,
+  .institution {
+    font-size: 1rem;
+  }
+}

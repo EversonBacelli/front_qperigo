@@ -1,0 +1,7 @@
+/* main-conteudos.css - Arquivo principal que importa todos os módulos CSS da pagina de conteudo */
+@import url('conteudo/artigo.css');
+@import url('conteudo/body.css');
+@import url('conteudo/botões.css');
+@import url('conteudo/cores.css');
+@import url('conteudo/indice.css');
+@import url('conteudo/responsividade.css');

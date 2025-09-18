@@ -1,0 +1,8 @@
+/* main-dev.css - Arquivo principal que importa todos os módulos CSS da pagina de devs */
+@import url('dev/cores.css');
+@import url('dev/sobre.css');
+@import url('dev/objetivos.css');
+@import url('dev/team-section.css');
+@import url('dev/animações.css');
+@import url('dev/responsividade.css');
+@import url('dev/about-sections.css');

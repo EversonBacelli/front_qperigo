@@ -1,0 +1,25 @@
+
+.numberpage {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberpage .number {
+    font-size: 20px;
+    color: rgb(70, 70, 70);
+}
+
+#prev-page,
+#next-page {
+    color: gray;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#prev-page:hover,
+#next-page:hover {
+    color: black;
+}

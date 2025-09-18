@@ -1,0 +1,7 @@
+/* main.css - Arquivo principal que importa todos os módulos CSS dos estilos globais */
+@import url('globais/botao-voltar.css');
+@import url('globais/footer.css');
+@import url('globais/header.css');
+@import url('globais/main.css');
+@import url('globais/rolagem-topo.css');
+@import url('globais/reset.css');

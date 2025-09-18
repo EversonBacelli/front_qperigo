@@ -1,0 +1,146 @@
+/* Componente: Artigo */
+h1 {
+  font-family: 'Sniglet', cursive;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-top: 20px;
+  padding-left: 0;
+  font-size: 1.5em;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--gradient-end));
+  border-radius: 2px;
+}
+
+.autor_data {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  gap: 20px;
+  font-family: "Sansation", sans-serif;
+  color: var(--secondary-color);
+  margin-top: 15px;
+  opacity: 0.85;
+  flex-wrap: wrap;
+}
+
+.autor, .nome_autor {
+  font-size: 1.1em;
+}
+
+.nome_autor {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.data {
+  padding-top: 0;
+  font-size: 1em;
+  background-color: rgba(206, 198, 218, 0.3);
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: var(--primary-color);
+}
+
+.banner {
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  position: relative;
+}
+
+.box-badge {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(138, 43, 226, 0.9);
+  border-radius: 20px;
+}
+
+.icon-badge {
+  padding-left: 5px;
+  height: 30px;
+}
+
+.card-badge {
+  color: white;
+  padding: 5px 12px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.img_produto, .video_experiencia {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.img_produto:hover {
+  transform: scale(1.02);
+}
+
+.art {
+  padding: 20px 0;
+}
+
+.art h3 {
+  color: var(--primary-color);
+  font-family: 'Sniglet', cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+  padding: 15px 0 10px 0;
+  margin-top: 25px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.art h3::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.art p {
+  font-family: "Sansation", sans-serif;
+  font-size: 1.1em;
+  color: var(--text-color);
+  text-align: justify;
+  letter-spacing: 0.5px;
+  padding: 10px 0;
+  line-height: 1.8;
+}
+
+.art p:first-of-type::first-letter {
+  font-size: 3.5em;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  color: var(--accent-color);
+  font-family: 'Sniglet', cursive;
+  font-weight: 400;
+}
+
+.conteudo {
+  position: relative;
+}

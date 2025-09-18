@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/frontend/assets/favicon.ico" type="image/x-icon">
+
+        <!-- Google Fonts (Sniglet) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shanti&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sansation&display=swap" rel="stylesheet">
+
+        <!-- estilos globais -->
+        <link rel="stylesheet" href="/frontend/css/pages/estilos globais/main-globais.css">
+
+        <!-- main-home.css - Arquivo principal que importa todos os módulos CSS da pagina de conteudo -->
+        <link rel="stylesheet" href="/frontend/css/pages/main-home.css">
+
+        <title>Blog - QPerigo</title>
+
+    </head>
+
+    <body>
+
+    <header>
+        <div class="div_logo">
+            <img src="/frontend/assets/images/logo_q_perigo.png" alt="Logo do blog 'QPerigo'">
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="#">Principal</a></li>
+                <li><a href="/frontend/desenvolvedores.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+
+            <button class="voltar-topo">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+
+            <section class="contain-carrossel">
+                <div class="contain-banners">
+                    <img src="/frontend/assets/images/banners/banner-1.png" alt="Banner 1">
+                    <img src="/frontend/assets/images/banners/banner-2.png" alt="Banner 2">
+                    <img src="/frontend/assets/images/banners/banner-3.png" alt="Banner 3">
+                </div>
+                <!-- Botões de navegação -->
+                <button class="carrossel-btn prev">❮</button>
+                <button class="carrossel-btn next">❯</button>
+                <!-- Indicadores -->
+                <div class="carrossel-indicadores">
+                    <div class="indicador active"></div>
+                    <div class="indicador"></div>
+                    <div class="indicador"></div>
+                </div>
+            </section>
+            <!--
+                <section class="contain-news">
+                    <h1>News</h1>
+
+                    <div class="news1">
+                        
+                        <div class="info">
+                            <h3>Misturas Caseiras de Produtos de Limpeza: O Perigo Invisível em Casa</h3>
+                            <p>Especialistas alertam sobre intoxicações e queimaduras causadas por misturas domésticas. Segundo Priscilla Castro, especialista de limpeza, “as misturas liberam gases tóxicos, podem causar queimaduras, reações alérgicas e intoxicações por inalação ou contato com a pele”</p>
+                            <div class="inferior-info">
+                                <a href="">Saiba Mais</a>
+                                <h4>Fonte: CASAVOGUE</h4>
+                            </div>
+
+                        </div>
+                        
+                        <div class="cover cover1">
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="news2">
+                        
+                        <div class="info">
+                            <h3>A ciência por trás das misturas tóxicas</h3>
+                            <p>Alerta sobre os perigos de misturar produtos de limpeza sem conhecimento técnico. Algumas combinações podem liberar gases tóxicos, como a mistura de água sanitária com vinagre, que pode gerar gás cloro, ou com amoníaco, que pode liberar gás amônia</p>
+                            <div class="inferior-info">
+                                <a href="">Saiba Mais</a>
+                                <h4>Fonte: correiobraziliense.com.br</h4>
+                            </div>
+
+                        </div>
+                        
+                        <div class="cover cover2">
+                            <img src="" alt="">
+                        </div>
+
+                    </div>
+
+                </section>
+            -->
+
+            <hr style="max-width: 1400px; margin: 30px auto;">
+
+            <section class="container-cards-gerais" id="container-cards-gerais">
+                
+                <h2 class="titulo-gerais" id="destaque-titulo">Destaques</h2>
+                <div class="cards-home-destaque">
+                    
+                </div>
+                
+                <div class="filtro-container">
+                
+                    <div class="container-filtro">
+                
+                        <h2 class="titulo-gerais">Produtos Químicos Domésticos</h2>
+                        
+                        <div class="search-container">
+                            <input type="search" class="search-input" placeholder="Encontre o produto químico que busca...">
+                            <button type="button" class="search-button" aria-label="Pesquisar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                            </button>
+                        </div>
+                        
+                        <abbr title="Filtrar postagens">
+                            <img id="filtro-icon" class="icons" src="/frontend/assets/images/icons/filter.png"
+                                alt="Ícone de Filtro">
+                        </abbr>
+                    </div>
+
+                    <div id="opcoes-filtro" class="opcoes-filtro">
+                        <div class="filtro-header">
+                            <span class="filtro-label">Cômodos</span>
+                            <div class="filtro-underline"></div>
+                        </div>
+                        <div class="filtro-buttons">
+                            <button class="room" id="1">
+                                <img src="/frontend/assets/images/icons/gas-stove.png" alt="">
+                                <h3>Cozinha</h3>
+                            </button>
+                            <button class="room" id="2">
+                                <img src="/frontend/assets/images/icons/bed.png" alt="">
+                                <h3>Quarto</h3>
+                            </button>
+                            <button class="room" id="3">
+                                <img src="/frontend/assets/images/icons/sofa.png" alt="">
+                                <h3>Sala de Estar</h3>
+                            </button>
+                            <button class="room" id="4">
+                                <img src="/frontend/assets/images/icons/basin.png" alt="">
+                                <h3>Banheiro</h3>
+                            </button>
+                            <button class="room" id="5">
+                                <img src="/frontend/assets/images/icons/laundry.png" alt="">
+                                <h3>Lavanderia</h3>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="titulo-filtro"></p>
+
+                </div>
+
+                <div class="cards-home-geral"></div>
+
+                <div class="numberpage">
+                    <div id="prev-page">&#10094;</div>
+                    <p class="number">1</p>
+                    <div id="next-page">&#10095;</div>
+                </div>
+
+            </section>
+
+            <hr style="max-width: 1400px; margin: 30px auto;">
+        
+        <footer class="project-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title"><i class="fas fa-flask"></i> Sobre o Projeto</h3>
+                    <p class="project-info">Projeto criado por alunos do 3º Informática para Internet do ano de 2024
+                        e por alunos do 2º Informática no ano de 2025
+                        sob a orientação do professor Everson Bacelli. O QPERIGO tem como objetivo conscientizar
+                        sobre os riscos das misturas químicas no cotidiano.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title"><i class="fas fa-school"></i> Instituição</h3>
+                    <div class="institution-info">
+                        <div class="institution-name"><i class="fas fa-graduation-cap"></i> ETEC CIDADE TIRADENTES</div>
+                        <div class="institution-details">2024/2025 - São Paulo, SP</div>
+                        <div class="institution-details">Centro Paula Souza</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024/2025 QPERIGO - Todos os direitos reservados</p>
+            </div>
+        </footer>
+
+        </main>
+
+
+
+
+
+        <script src="/frontend/js/components/home/carrossel-home-banner.js"></script>
+        <script src="/frontend/js/main.js" type="module"></script>
+    </body>
+
+</html>

@@ -1,0 +1,137 @@
+
+/* Estilos para o container de pesquisa */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.466);
+  border-radius: 25px;
+  min-width: 200px;
+  flex-shrink: 1;
+}
+
+/* Estilo para o input de pesquisa */
+.search-input {
+  padding: 10px 15px;
+  padding-right: 40px; 
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: 'Sniglet', cursive;
+  background-color: #FEF5F9;
+  color: #333;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  height: 45px;
+}
+
+.search-input::placeholder {
+  font-size: 14px;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8a6bb6;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  color: #6a4f96;
+}
+
+/* Modifica o botão de limpar padrão */
+.search-input::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px;
+  margin-left: -8px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #8a6bb6;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+}
+
+.search-input::-webkit-search-cancel-button:hover {
+  background-color: #6a4f96;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets e telas menores */
+@media (max-width: 1024px) {
+      .search-input {
+    height: 38px;
+    font-size: 15px;
+  }
+  
+  .search-input:focus {
+    height: 42px;
+  }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+}
+
+
+/* Dispositivos móveis */
+@media (max-width: 480px) {
+      
+  .search-container {
+    max-width: 100%;
+  }
+  
+  .search-input {
+    height: 36px;
+    font-size: 14px;
+    padding: 8px 12px;
+    padding-right: 35px;
+  }
+  
+  .search-input:focus {
+    height: 40px;
+  }
+  
+  .search-input::placeholder {
+    font-size: 13px;
+  }
+  
+  .search-button {
+    right: 8px;
+  }
+  
+  .search-input::-webkit-search-cancel-button {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+/* Telas muito pequenas (orientação retrato) */
+@media (max-width: 320px) {
+      .search-input {
+    font-size: 13px;
+  }
+}
