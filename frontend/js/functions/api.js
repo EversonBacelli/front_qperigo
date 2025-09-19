@@ -1,9 +1,12 @@
 const url = "https://backend-qperigo.onrender.com/postagens";
 export let postagens = [];
 
+const versaoAtual = "1.0.2";
+
 export async function carregarDados() {
     const localData = localStorage.getItem("postagens");
-    if(localData){
+    const versaoGet = localStorage.getItem("versao")
+    if(localData && versaoAtual == versaoGet){
         postagens = JSON.parse(localData);
         console.log("Dados carregados do localStorage.");
     } else {
@@ -25,11 +28,12 @@ export async function carregarDados() {
                 acessos: postagem.acessos,
                 armazenamento: postagem.armazenamento,
                 periculosidade: postagem.periculosidade
-            }));
+             }));
+            localStorage.setItem("versao", versaoAtual)
             localStorage.setItem("postagens", JSON.stringify(postagens));            
         } catch (error) {
             console.error("Erro ao carregar dados:", error);
-            alert("Erro ao carregar dados da API.");
+            alert("Erro ao carregar dados, informe a equipe de desenvolvimento.");
         }
     }
 }
