@@ -129,6 +129,7 @@ h1::after {
   letter-spacing: 0.5px;
   padding: 10px 0;
   line-height: 1.8;
+  margin-top: 3px;
 }
 
 .art p:first-of-type::first-letter {
